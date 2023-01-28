@@ -46,14 +46,14 @@ function BlurImage({ image }: { image: Image }) {
 
   return (
     <a href={image.href} className="group">
-      <div className={`${image.orientation} aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8`}>
+      <div className={`aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8`}>
         <Image
           alt=""
           src={image.imageSrc}
           layout="fill"
           objectFit="cover"
           className={cn(
-            'duration-700 ease-in-out group-hover:opacity-75',
+            'duration-700 ease-in-out group-hover:opacity-75 shadow-2xll',
             isLoading
               ? 'scale-110 blur-2xl grayscale'
               : 'scale-100 blur-0 grayscale-0'
